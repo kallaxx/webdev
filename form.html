@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Form - MBTI</title>
+    <link rel="stylesheet" type="text/css" href="style.css" title="normal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="skip">
+        <a href="#content">Jump to content</a>
+    </nav>
+    <nav id="visually_impaired">
+        <button id="switch" onclick="switch_theme()"><strong>Switch theme</strong></button>
+        <script>
+            function set_theme(themeName)
+            {
+                localStorage.setItem('theme', themeName);
+                document.documentElement.className = themeName;
+            }
+            function switch_theme()
+            {
+                if (localStorage.getItem('theme') === 'theme_standard')
+                {
+                    set_theme('theme_other');
+                }
+                else
+                {
+                    set_theme('theme_standard');
+                }
+            }
+            (function()
+            {
+                if (localStorage.getItem('theme') === 'theme_standard')
+                {
+                    set_theme('theme_standard');
+                }
+                else
+                {
+                    set_theme('theme_other');
+                }
+            })();
+        </script>
+    </nav>
+    <header>
+        <div class="container-fluid">
+            <nav id="top">
+                <h1>MBTI</h1>
+                <img class="img-fluid" id="headerpic" src="media/banner.jpg" alt="header">
+                <div class="menulist">
+                    <ul>
+                        <li><a href="index.html" class="others">Main page</a></li>
+                        <li><a href="types.html" class="others">Types</a></li>
+                        <li><a href="type_yourself.html" class="others">Type yourself</a></li>
+                        <li><a href="form.html" class="current">Form</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main id="content">
+        <form action="mailto:bxtgym@inf.elte.hu" method="post" enctype="text/plain">
+            <fieldset>
+                <legend>Form</legend>
+                    <aside class="work_stupid_machine">
+                        <div>
+                            <label for="name"><strong>Name:</strong></label><br>
+                            <input type="text" name="your_name" id="name" placeholder="Enter your name" maxlength="30"><br>
+                        </div>
+                        <br>
+                        <div>
+                            <strong>Sex:</strong><br>
+                            <div>
+                                <input type="radio" name="sex" id="f" value="option1">
+                                <label for="f">Female</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="sex" id="m" value="option2">
+                                <label for="m">Male</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="sex" id="o" value="option3">
+                                <label for="o">Other</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <strong>Which method(s) did you use to get your result?</strong><br>
+                            <div>
+                                <input type="checkbox" id="16p" value="option1">
+                                <label for="16p">16personalities</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cf" value="option2">
+                                <label for="cf">Cognitive functions</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="sa" value="option3">
+                                <label for="sa">Sakinorva</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="tr" value="option4">
+                                <label for="tr">Truity</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="smth" value="option5">
+                                <label for="smth">Someone typed me</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="other" value="option6">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                    </aside>
+                    <br>
+                    <aside class="work_stupid_machine">
+                        <div>
+                            <strong>What is your MBTI type?</strong><br>
+                            <div>
+                                <input type="radio" name="type" id="intj" value="option1">
+                                <label for="intj">INTJ</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="entj" value="option2">
+                                <label for="entj">ENTJ</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="intp" value="option3">
+                                <label for="intp">INTP</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="entp" value="option4">
+                                <label for="entp">ENTP</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="infj" value="option5">
+                                <label for="infj">INFJ</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="enfj" value="option6">
+                                <label for="enfj">ENFJ</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="infp" value="option7">
+                                <label for="infp">INFP</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="enfp" value="option8">
+                                <label for="enfp">ENFP</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="istj" value="option9">
+                                <label for="istj">ISTJ</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="estj" value="option10">
+                                <label for="estj">ESTJ</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="istp" value="option11">
+                                <label for="istp">ISTP</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="estp" value="option12">
+                                <label for="estp">ESTP</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="isfj" value="option13">
+                                <label for="isfj">ISFJ</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="esfj" value="option14">
+                                <label for="esfj">ESFJ</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="isfp" value="option15">
+                                <label for="isfp">ISFP</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" id="esfp" value="option16">
+                                <label for="esfp">ESFP</label>
+                            </div>
+                        </div>
+                    </aside>
+                    <aside class="work_stupid_machine">
+                        <div>
+                            <label for="advice"><strong>How can I improve my website?</strong></label><br>
+                            <textarea name="comments" id="advice" rows="5" placeholder="Leave a constructive comment about my website" maxlength="300"></textarea><br>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </aside>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <a href="#top">Go to the top</a>
+            <address>Made by BXTGYM, 2022</address>
+        </div>
+    </footer>
+</body>
+</html>

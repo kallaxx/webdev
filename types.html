@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Types - MBTI</title>
+    <link rel="stylesheet" type="text/css" href="style.css" title="normal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="skip">
+        <a href="#content">Jump to content</a>
+    </nav>
+    <nav id="visually_impaired">
+        <button id="switch" onclick="switch_theme()"><strong>Switch theme</strong></button>
+        <script>
+            function set_theme(themeName)
+            {
+                localStorage.setItem('theme', themeName);
+                document.documentElement.className = themeName;
+            }
+            function switch_theme()
+            {
+                if (localStorage.getItem('theme') === 'theme_standard')
+                {
+                    set_theme('theme_other');
+                }
+                else
+                {
+                    set_theme('theme_standard');
+                }
+            }
+            (function()
+            {
+                if (localStorage.getItem('theme') === 'theme_standard')
+                {
+                    set_theme('theme_standard');
+                }
+                else
+                {
+                    set_theme('theme_other');
+                }
+            })();
+        </script>
+    </nav>
+    <header>
+        <div class="container-fluid">
+            <nav id="top">
+                <h1>MBTI</h1>
+                <img id="headerpic" src="media/banner.jpg" alt="header">
+                <div class="menulist">
+                    <ul>
+                        <li><a href="index.html" class="others">Main page</a></li>
+                        <li><a href="types.html" class="current">Types</a></li>
+                        <li><a href="type_yourself.html" class="others">Type yourself</a></li>
+                        <li><a href="form.html" class="others">Form</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main id="content">
+        <div class="table-responsive">
+            <table>
+                <caption>
+                    <details>
+                        <summary>Types</summary>
+                        <p>Here you can see all the MBTI types with a quick summary of them. If you want to know more about
+                            each personality, click on its name for more detailed information.</p>
+                    </details>
+                </caption>
+                <thead>
+                    <tr>
+                        <th style="width : 15%;">Logos</th>
+                        <th style="width : 45%">Types</th>
+                        <th style="width : 40%">Characteristics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col_other"><img src="media/intj.png" class="table_pics" alt="INTJ logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/architect" target="blank">INTJ</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Very perfectionistic</li>
+                                <li>Can be overly analytical</li>
+                                <li>Has high expectations</li>
+                                <li>Hard worker</li>
+                                <li>May seem insensitive</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/entj.png" class="table_pics" alt="ENTJ logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/commander" target="blank">ENTJ</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Great leader</li>
+                                <li>Might be impatient</li>
+                                <li>Good communication skills</li>
+                                <li>Well-organized</li>
+                                <li>Stubborn</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/intp.jpg" class="table_pics" alt="INTP logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/logician" target="blank">INTP</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Abstract thinker</li>
+                                <li>Very loyal</li>
+                                <li>Hard to get to know them</li>
+                                <li>Has trouble expressing feelings</li>
+                                <li>Prone to self-doubt</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/entp.png" class="table_pics" alt="ENTP logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/debater" target="blank">ENTP</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Argumentative</li>
+                                <li>Enjoys debating</li>
+                                <li>Does not like being controlled</li>
+                                <li>Creative</li>
+                                <li>Innovative</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/infj.jpg" class="table_pics" alt="INFJ logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/advocate" target="blank">INFJ</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Sensitive</li>
+                                <li>Dislikes confrontation</li>
+                                <li>Artistic</li>
+                                <li>Values deep relationships</li>
+                                <li>Idealistic</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/enfj.png" class="table_pics" alt="ENFJ logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/protagonist" target="blank">ENFJ</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Outgoing</li>
+                                <li>Self-sacrificing</li>
+                                <li>Empathetic</li>
+                                <li>Affectionate</li>
+                                <li>Approval-seeking</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/infp.png" class="table_pics" alt="INFP logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/mediator" target="blank">INFP</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Devoted</li>
+                                <li>Caring</li>
+                                <li>Overlooks details</li>
+                                <li>Works alone well</li>
+                                <li>Tends to take everything personally</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/enfp.png" class="table_pics" alt="ENFP logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/campaigner" target="blank">ENFP</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Needs approval from others</li>
+                                <li>Spontaneous</li>
+                                <li>Enthusiastic</li>
+                                <li>Tends to get stressed out easily</li>
+                                <li>Overthinks</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/istj.png" class="table_pics" alt="ISTJ logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/logistician" target="blank">ISTJ</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Detail-oriented</li>
+                                <li>Judgmental</li>
+                                <li>Observant</li>
+                                <li>Practical</li>
+                                <li>Tends to blame others</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/estj.png" class="table_pics" alt="ESTJ logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/executive" target="blank">ESTJ</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Self-confident</li>
+                                <li>Traditional</li>
+                                <li>Bossy</li>
+                                <li>Dependable</li>
+                                <li>Inflexible</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/isfj.png" class="table_pics" alt="ISFJ logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/defender" target="blank">ISFJ</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Reliable</li>
+                                <li>Avoids confrontations</li>
+                                <li>Eye for detail</li>
+                                <li>Dislikes change</li>
+                                <li>May neglect their own needs</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/esfj.png" class="table_pics" alt="ESFJ logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/consul" target="blank">ESFJ</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Conscientious</li>
+                                <li>Sensitive to criticism</li>
+                                <li>Needy</li>
+                                <li>Controlling</li>
+                                <li>Enjoys helping others</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/istp.png" class="table_pics" alt="ISTP logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/virtuoso" target="blank">ISTP</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Learns by experience</li>
+                                <li>Action-oriented</li>
+                                <li>Risk-taker</li>
+                                <li>Does not like commitment</li>
+                                <li>Grows bored easily</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/estp.png" class="table_pics" alt="ESTP logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/entrepreneur" target="blank">ESTP</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Gregarious</li>
+                                <li>Adaptable</li>
+                                <li>Dramatic</li>
+                                <li>Impulsive</li>
+                                <li>Energetic</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/isfp.jpg" class="table_pics" alt="ISFP logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/adventurer" target="blank">ISFP</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Enjoys hand-on learning</li>
+                                <li>Strong need for personal space</li>
+                                <li>Quiet</li>
+                                <li>Very aware of their environment</li>
+                                <li>Dislikes conflicts</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col_other"><img src="media/esfp.png" class="table_pics" alt="ESFP logo"></td>
+                        <td class="col2"><a href="https://www.16personalities.com/academy/entertainer" target="blank">ESFP</a></td>
+                        <td class="col_other">
+                            <ul>
+                                <li>Optimistic</li>
+                                <li>Does not plan ahead</li>
+                                <li>Enjoys socializing</li>
+                                <li>Focused on the present</li>
+                                <li>Dislikes abstract theories</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <a href="#top">Go to the top</a>
+            <address>Made by BXTGYM, 2022</address>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,326 @@
+body
+{
+    background-image: url(media/background.jpg);
+    background-size: 100%;
+    color: var(--font-color, black);
+    margin: 40px;
+}
+
+body h1, h2, h3
+{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+body h1
+{
+    background-color: var(--background-color, #e5b0ff);
+    padding: 10px;
+    border-radius: 25px;
+    font-size: var(--font-size-h1, 2em);
+}
+
+body p
+{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: var(--font-size, 1em);
+}
+
+.theme_standard
+{
+    --font-size: 1em;
+    --font-size-h1: 2em;
+    --font-color: black;
+    --background-color: #e5b0ff;
+    --border-color: black;
+    --link-color: #003f02;
+    --link-color-visited: #0e1574;
+}
+
+.theme_other
+{
+    --font-size: 125%;
+    --font-size-h1: 3em;
+    --font-color: white;
+    --background-color: black;
+    --border-color: white;
+    --link-color: cyan;
+    --link-color-visited: cadetblue;
+}
+
+#headerpic
+{
+    width: 100%;
+    height: 400px;
+    margin: 10px 0;
+}
+
+header, #header, main, #main, footer, #footer
+{
+    width: 80%;
+    min-width: 400px;
+    max-width: 1600px;
+}
+
+main, #main, footer, #footer, header ul, #header ul
+{
+    background-color: var(--background-color, #e5b0ff);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+header, #header, main, #main
+{
+    margin: auto;
+}
+
+footer, #footer
+{
+    margin: 30px auto;
+    font-size: var(--font-size, 1em);
+}
+
+header li, #header li
+{
+    display: inline;
+    white-space: nowrap;
+    padding: 3%;
+    font-variant: small-caps;
+}
+
+header li a:hover, #header li a:hover
+{
+    text-decoration: underline;
+}
+
+header ul, #header ul
+{
+    white-space: nowrap;
+}
+
+video
+{
+    width: 80%;
+    height: 80%;
+}
+
+.current, .others, #switch
+{
+    border: 2px black solid;
+    border-radius: 25px;
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+}
+
+.current, .others
+{
+    padding: 10px 50px;
+    font-size: var(--font-size, 1em);
+}
+
+.current
+{
+    background-color: white;
+}
+
+.others
+{
+    background-color: violet;
+}
+
+#switch
+{
+    width: 100px;
+    height: 50px;
+    background-color: white;
+}
+
+.skip a
+{
+    color: black;
+    position: absolute;
+    left: -9999px;
+}
+
+.skip a:focus
+{
+    position: static;
+    background: white;
+}
+
+main a, #main a, footer a, #footer a
+{
+    color: var(--link-color, #003f02);
+    text-decoration: underline;
+}
+
+main a:visited, #main a:visited, footer a:visited, #footer a:visited
+{
+    color: var(--link-color-visited, #0e1574);
+    text-decoration: underline;
+}
+
+article#vid
+{
+    column-count: 2;
+    column-gap: 50px;
+}
+
+form
+{
+    background-color: var(--background-color, #e5b0ff);
+    font-size: var(--font-size, 1em);
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.work_stupid_machine
+{
+    float: left;
+    width: 30%;
+}
+
+textarea
+{
+    width: 100%;
+}
+
+.table_pics
+{
+    width: 137px;
+    height: 137px;
+}
+
+table
+{
+    border: 3px solid;
+    border-color: var(--border-color, black);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td.col_other
+{
+    border: 1px solid;
+    border-color: var(--border-color, black);
+    padding: 0;
+    font-size: var(--font-size, 1em);
+}
+
+table th
+{
+    border: 1px solid;
+    border-color: var(--border-color, black);
+    text-align: center;
+    font-size: var(--font-size, 1em);
+}
+
+table td.col2
+{
+    border: 1px solid;
+    border-color: var(--border-color, black);
+    padding: 0;
+    text-align: center;
+    font-size: var(--font-size, 1em);
+}
+
+caption
+{
+    caption-side: top;
+    text-align: center;
+}
+
+.ty_pic
+{
+    width: 80%;
+    height: 80%;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+
+.classy_af_bottom
+{
+    border-bottom: 1px black solid;
+}
+
+aside
+{
+    float: right;
+    width: 200px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+figcaption
+{
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px)
+{
+    aside
+    {
+        float: none;
+        width: 150px;
+        margin: 0;
+    }
+
+    .work_stupid_machine
+    {
+        float: none;
+        width: 200px;
+        margin: 0;
+    }
+
+    header li, #header li
+    {
+        display:block;
+    }
+
+    video
+    {
+        width: 70%;
+        height: 70%;
+    }
+
+    #headerpic
+    {
+        height: 50%;
+    }
+
+    article#vid
+    {
+        column-count: 1;
+    }
+}
+
+@media print
+{
+    body
+    {
+        margin: 3cm;
+        font-family: 'Times New Roman', Times, serif;
+        max-width: unset;
+        margin: 0 auto;
+    }
+
+    nav, header li, video, #header li
+    {
+        display: none;
+    }
+
+    img
+    {
+        width: 40%;
+        height: 40%;
+    }
+
+    a::after
+    {
+        content: "(" attr(href) ")";
+    }
+}

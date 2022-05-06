@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Main page - MBTI</title>
+    <link rel="stylesheet" type="text/css" href="style.css" title="normal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="skip">
+        <a href="#content">Jump to content</a>
+    </nav>
+    <nav id="visually_impaired">
+        <button id="switch" onclick="switch_theme()"><strong>Switch theme</strong></button>
+        <script>
+            function set_theme(themeName) {
+                localStorage.setItem('theme', themeName);
+                document.documentElement.className = themeName;
+            }
+            function switch_theme() {
+                if (localStorage.getItem('theme') === 'theme_standard') {
+                    set_theme('theme_other');
+                }
+                else {
+                    set_theme('theme_standard');
+                }
+            }
+            (function () {
+                if (localStorage.getItem('theme') === 'theme_standard') {
+                    set_theme('theme_standard');
+                }
+                else {
+                    set_theme('theme_other');
+                }
+            })();
+        </script>
+    </nav>
+    <header>
+        <div class="container-fluid">
+            <nav id="top">
+                <h1>MBTI</h1>
+                <img class="img-fluid" id="headerpic" src="media/banner.jpg" alt="header">
+                <div class="menulist">
+                    <ul>
+                        <li><a href="index.html" class="current">Main page</a></li>
+                        <li><a href="types.html" class="others">Types</a></li>
+                        <li><a href="type_yourself.html" class="others">Type yourself</a></li>
+                        <li><a href="form.html" class="others">Form</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main id="content">
+        <div class="container-fluid">
+            <section>
+                <h2>Opening page</h2>
+                <article id="vid">
+                    <h3>What is MBTI?</h3>
+                    <p><strong>MBTI</strong> stands for <strong>Myers Briggs Type Indicator</strong>. It is based on the study on <strong>cognitive functions</strong> by
+                        <em>Carl Jung</em>.
+                        With the knowledge from this paper, <em>Katherine Cook Briggs</em> and <em>Isabel Briggs Myers</em> had developed
+                        this test,
+                        as a simplified version of the original study. The aim of this is to help people to <strong>understand
+                            themselves
+                            and others</strong> with more detail. The results can help you <strong>improve</strong> your everyday life, ranging from
+                        studying,
+                        working, to socializing. It is also a great way to practice some <strong>self-reflection</strong> and might also
+                        help you accept yourself and overcome your less desirable traits, by giving them meaning. </p>
+                        <br>
+                        <p>Here is a video explaining it in more depth:</p>
+                        <video class="ratio ratio-16x9"
+                            src="media/MBTI.mp4" controls poster="media/thumbnail.jpg">
+                        </video>
+                        <a href="video_desc.html" target="blank">
+                            <p>The video's description</p>
+                        </a>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <a href="#top">Go to the top</a>
+            <address>Made by BXTGYM, 2022</address>
+        </div>
+    </footer>
+</body>
+
+</html>
